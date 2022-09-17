@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment version="4608" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedViewController">
+            <connections>
+                <outlet property="activityIndicator" destination="VF6-pT-Ruy" id="gJB-UF-E4Z"/>
+                <outlet property="bannerView" destination="Mq7-av-Nk8" id="u4M-kU-7qy"/>
+                <outlet property="feedTable" destination="VxZ-0t-vBC" id="N1l-Wb-mwa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="BgView">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header.png" translatesAutoresizingMaskIntoConstraints="NO" id="gVq-0e-lqj">
+                    <rect key="frame" x="95" y="25" width="200" height="48"/>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="MRS-1n-2K2"/>
+                        <constraint firstAttribute="height" constant="48" id="ukh-Qp-1vG"/>
+                    </constraints>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="VxZ-0t-vBC" userLabel="feedTable">
+                    <rect key="frame" x="0.0" y="78" width="390" height="667"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="VP0-BA-ZM5"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="VP0-BA-ZM5"/>
+                        </mask>
+                    </variation>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="VF6-pT-Ruy">
+                    <rect key="frame" x="176.66666666666666" y="393" width="37" height="37"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mq7-av-Nk8" userLabel="bannerView" customClass="GADBannerView">
+                    <rect key="frame" x="0.0" y="745" width="390" height="50"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="NRo-Y2-lQu"/>
+                        <constraint firstAttribute="height" constant="50" id="Zds-he-BRu"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="NRo-Y2-lQu"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.12724064290523529" green="0.072289809584617615" blue="0.48285317420959473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Mq7-av-Nk8" secondAttribute="bottom" constant="49" id="0RV-3g-6In"/>
+                <constraint firstItem="VF6-pT-Ruy" firstAttribute="centerY" secondItem="VxZ-0t-vBC" secondAttribute="centerY" id="7dm-Gq-l6R"/>
+                <constraint firstAttribute="trailing" secondItem="Mq7-av-Nk8" secondAttribute="trailing" id="C4Q-oB-GOO"/>
+                <constraint firstItem="VxZ-0t-vBC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="H58-Ss-vRJ"/>
+                <constraint firstAttribute="centerX" secondItem="Mq7-av-Nk8" secondAttribute="centerX" id="Nqf-xI-JoY"/>
+                <constraint firstItem="gVq-0e-lqj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="SHJ-DB-dNx"/>
+                <constraint firstAttribute="trailing" secondItem="VxZ-0t-vBC" secondAttribute="trailing" id="Yzj-1M-r9V"/>
+                <constraint firstItem="VF6-pT-Ruy" firstAttribute="centerX" secondItem="VxZ-0t-vBC" secondAttribute="centerX" id="Zn8-0P-9N7"/>
+                <constraint firstItem="Mq7-av-Nk8" firstAttribute="top" secondItem="VxZ-0t-vBC" secondAttribute="bottom" id="bAr-Dg-Nux"/>
+                <constraint firstItem="Mq7-av-Nk8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dgt-nk-T6u"/>
+                <constraint firstAttribute="centerX" secondItem="gVq-0e-lqj" secondAttribute="centerX" id="qCE-hI-rDi"/>
+                <constraint firstItem="VxZ-0t-vBC" firstAttribute="top" secondItem="gVq-0e-lqj" secondAttribute="bottom" constant="5" id="rPV-dl-CYD"/>
+            </constraints>
+            <point key="canvasLocation" x="314.5" y="381.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="header.png" width="320" height="64"/>
+    </resources>
+</document>

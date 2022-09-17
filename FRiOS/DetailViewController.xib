@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment version="4608" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController">
+            <connections>
+                <outlet property="activityIndicator" destination="lje-Mz-JV8" id="ZRe-HF-gOu"/>
+                <outlet property="bannerView" destination="1hP-lC-Hnd" id="mtO-xs-ib4"/>
+                <outlet property="navBar" destination="Ytl-Fj-OxX" id="9R1-XG-1Qo"/>
+                <outlet property="navItem" destination="aot-3P-90v" id="Vgj-Nr-ip1"/>
+                <outlet property="titleLabel" destination="SFC-ho-Gb4" id="2tk-sq-zYs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="uEw-K3-g43" id="FPv-Yc-jZh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="BgView">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ytl-Fj-OxX">
+                    <rect key="frame" x="0.0" y="20" width="390" height="44"/>
+                    <color key="backgroundColor" red="0.12724064290523529" green="0.072289809584617615" blue="0.48285317420959473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <items>
+                        <navigationItem title="Trattoria Cesarino" id="aot-3P-90v"/>
+                    </items>
+                </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zBh-e1-TcC">
+                    <rect key="frame" x="0.0" y="64" width="390" height="780"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="SFC-ho-Gb4">
+                    <rect key="frame" x="10" y="69" width="375" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="bJR-09-cDL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <color key="textColor" red="0.12724064290523529" green="0.072289809584617615" blue="0.48285317420959473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </label>
+                <webView alpha="0.0" contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uEw-K3-g43" userLabel="webView">
+                    <rect key="frame" x="0.0" y="104" width="390" height="642"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="I4J-P1-7qa"/>
+                    </connections>
+                </webView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="lje-Mz-JV8" userLabel="activityIndicator">
+                    <rect key="frame" x="176.66666666666666" y="406.66666666666669" width="37" height="37"/>
+                    <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWO-jD-ruA" userLabel="twitterButton">
+                    <rect key="frame" x="240" y="749" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="kSx-Xi-xfG"/>
+                        <constraint firstAttribute="height" constant="40" id="xcu-eh-eJc"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="share_twitter.png">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="shareTwitter:" destination="-1" eventType="touchUpInside" id="P6P-sF-D4Z"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oey-7d-R7X" userLabel="facebookButton">
+                    <rect key="frame" x="290" y="749" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="WEc-Sb-kQI"/>
+                        <constraint firstAttribute="height" constant="40" id="zih-Oe-3OZ"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="share_facebook.png">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="shareFacebook:" destination="-1" eventType="touchUpInside" id="uDD-WX-fLF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVl-VU-IlP" userLabel="whatsappButton">
+                    <rect key="frame" x="340" y="749" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="H3x-0K-4xY"/>
+                        <constraint firstAttribute="width" constant="40" id="nsG-qA-DgP"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="share_whatsapp.png">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="shareWhatsapp:" destination="-1" eventType="touchUpInside" id="Frq-DS-aLR"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hP-lC-Hnd" userLabel="bannerView" customClass="GADBannerView">
+                    <rect key="frame" x="0.0" y="794" width="390" height="50"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="XIp-a9-DUT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.12724064290523529" green="0.072289809584617615" blue="0.48285317420959473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="1hP-lC-Hnd" secondAttribute="trailing" id="9bb-jh-52w"/>
+                <constraint firstItem="1hP-lC-Hnd" firstAttribute="top" secondItem="kVl-VU-IlP" secondAttribute="bottom" constant="5" id="A3a-aO-mKB"/>
+                <constraint firstItem="pWO-jD-ruA" firstAttribute="centerY" secondItem="kVl-VU-IlP" secondAttribute="centerY" id="HbF-cA-7uH"/>
+                <constraint firstItem="1hP-lC-Hnd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Icd-Fq-nMm"/>
+                <constraint firstAttribute="trailing" secondItem="zBh-e1-TcC" secondAttribute="trailing" id="Jfo-1m-qYs"/>
+                <constraint firstItem="zBh-e1-TcC" firstAttribute="top" secondItem="Ytl-Fj-OxX" secondAttribute="bottom" id="K9b-Hm-eQh"/>
+                <constraint firstItem="uEw-K3-g43" firstAttribute="centerX" secondItem="lje-Mz-JV8" secondAttribute="centerX" id="Ngp-qm-JTa"/>
+                <constraint firstItem="uEw-K3-g43" firstAttribute="top" secondItem="SFC-ho-Gb4" secondAttribute="bottom" constant="5" id="Oqd-A1-vUs"/>
+                <constraint firstItem="SFC-ho-Gb4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="SF9-MJ-xkX"/>
+                <constraint firstItem="Ytl-Fj-OxX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WwD-bU-TA8"/>
+                <constraint firstItem="oey-7d-R7X" firstAttribute="leading" secondItem="pWO-jD-ruA" secondAttribute="trailing" constant="10" id="Y6l-Xa-aee"/>
+                <constraint firstItem="SFC-ho-Gb4" firstAttribute="top" secondItem="Ytl-Fj-OxX" secondAttribute="bottom" constant="5" id="YDX-Vn-D5V"/>
+                <constraint firstItem="Ytl-Fj-OxX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="bXf-il-Thg"/>
+                <constraint firstAttribute="bottom" secondItem="zBh-e1-TcC" secondAttribute="bottom" id="cHc-xa-Gpp"/>
+                <constraint firstAttribute="trailing" secondItem="uEw-K3-g43" secondAttribute="trailing" id="dmo-1g-0zk"/>
+                <constraint firstItem="uEw-K3-g43" firstAttribute="centerY" secondItem="lje-Mz-JV8" secondAttribute="centerY" id="eDz-hR-XEy"/>
+                <constraint firstAttribute="trailing" secondItem="Ytl-Fj-OxX" secondAttribute="trailing" id="evO-F8-J4u"/>
+                <constraint firstAttribute="trailing" secondItem="SFC-ho-Gb4" secondAttribute="trailing" constant="5" id="iEB-A2-P4S"/>
+                <constraint firstItem="kVl-VU-IlP" firstAttribute="top" secondItem="uEw-K3-g43" secondAttribute="bottom" constant="3" id="pU0-Nq-fEo"/>
+                <constraint firstItem="zBh-e1-TcC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qto-z9-oRA"/>
+                <constraint firstAttribute="bottom" secondItem="1hP-lC-Hnd" secondAttribute="bottom" id="qzS-QI-gfg"/>
+                <constraint firstItem="kVl-VU-IlP" firstAttribute="centerY" secondItem="oey-7d-R7X" secondAttribute="centerY" id="riy-YP-b6W"/>
+                <constraint firstItem="kVl-VU-IlP" firstAttribute="leading" secondItem="oey-7d-R7X" secondAttribute="trailing" constant="10" id="sEm-7I-mXY"/>
+                <constraint firstItem="uEw-K3-g43" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sYE-ed-7tA"/>
+                <constraint firstAttribute="trailing" secondItem="kVl-VU-IlP" secondAttribute="trailing" constant="10" id="zEI-y8-agQ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="48" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="share_facebook.png" width="144" height="144"/>
+        <image name="share_twitter.png" width="144" height="144"/>
+        <image name="share_whatsapp.png" width="144" height="144"/>
+    </resources>
+</document>
